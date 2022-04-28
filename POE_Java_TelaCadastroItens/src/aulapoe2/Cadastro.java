@@ -36,15 +36,15 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         areaDescricao = new javax.swing.JTextArea();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        radioSim = new javax.swing.JRadioButton();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        radioNao = new javax.swing.JRadioButton();
+        comboFaixaValor = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        checkMx = new javax.swing.JCheckBox();
+        checkPlat = new javax.swing.JCheckBox();
+        checkCar = new javax.swing.JCheckBox();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -72,23 +72,24 @@ public class Cadastro extends javax.swing.JFrame {
         areaDescricao.setRows(5);
         jScrollPane2.setViewportView(areaDescricao);
 
-        radioButtonGroupInventory.add(jRadioButton1);
-        jRadioButton1.setText("Sim");
+        radioButtonGroupInventory.add(radioSim);
+        radioSim.setSelected(true);
+        radioSim.setText("Sim");
 
         jLabel4.setText("Possui estoque:");
 
-        radioButtonGroupInventory.add(jRadioButton2);
-        jRadioButton2.setText("Não");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        radioButtonGroupInventory.add(radioNao);
+        radioNao.setText("Não");
+        radioNao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                radioNaoActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "  ", "até R$10,00", "de R$10,00 a R$30,00", "de R$30,00 a R$50,00", "acima de R$ 50,00" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        comboFaixaValor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "  ", "até R$10,00", "de R$10,00 a R$30,00", "de R$30,00 a R$50,00", "acima de R$ 50,00" }));
+        comboFaixaValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                comboFaixaValorActionPerformed(evt);
             }
         });
 
@@ -97,24 +98,24 @@ public class Cadastro extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fornecedor", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.ABOVE_TOP));
 
-        jCheckBox1.setBackground(new java.awt.Color(0, 0, 0));
-        jCheckBox1.setText("MX Company");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        checkMx.setBackground(new java.awt.Color(0, 0, 0));
+        checkMx.setText("MX Company");
+        checkMx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                checkMxActionPerformed(evt);
             }
         });
 
-        jCheckBox2.setBackground(new java.awt.Color(0, 0, 0));
-        jCheckBox2.setText("Platinum");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        checkPlat.setBackground(new java.awt.Color(0, 0, 0));
+        checkPlat.setText("Platinum");
+        checkPlat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                checkPlatActionPerformed(evt);
             }
         });
 
-        jCheckBox3.setBackground(new java.awt.Color(0, 0, 0));
-        jCheckBox3.setText("CarBus");
+        checkCar.setBackground(new java.awt.Color(0, 0, 0));
+        checkCar.setText("CarBus");
 
         jLabel6.setBackground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Empresa(s):");
@@ -139,11 +140,11 @@ public class Cadastro extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(checkMx, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(checkPlat, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(checkCar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -161,10 +162,10 @@ public class Cadastro extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
+                    .addComponent(checkMx)
                     .addComponent(jLabel6)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3))
+                    .addComponent(checkPlat)
+                    .addComponent(checkCar))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
@@ -221,12 +222,12 @@ public class Cadastro extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
+                                .addComponent(radioSim)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton2))
+                                .addComponent(radioNao))
                             .addComponent(jScrollPane2)
                             .addComponent(campoNome)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(comboFaixaValor, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30))
@@ -259,13 +260,13 @@ public class Cadastro extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jRadioButton1)
-                                .addComponent(jRadioButton2))
+                                .addComponent(radioSim)
+                                .addComponent(radioNao))
                             .addComponent(jLabel4)))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboFaixaValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -291,21 +292,24 @@ public class Cadastro extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void radioNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioNaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_radioNaoActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void comboFaixaValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboFaixaValorActionPerformed
+        
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_comboFaixaValorActionPerformed
+
+    private void checkMxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkMxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkMxActionPerformed
+
+    private void checkPlatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkPlatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkPlatActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
@@ -320,8 +324,30 @@ public class Cadastro extends javax.swing.JFrame {
     private void botaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSalvarActionPerformed
         String nome = campoNome.getText();
         String descricao = areaDescricao.getText();
-        JOptionPane.showMessageDialog(null, "Nome do produto: " + nome + "\n" +"Descrição do prod: " + descricao);
-            // TODO add your handling code here:
+        String estoque = "Possui estoque";
+        String faixaValor = comboFaixaValor.getSelectedItem().toString();
+        String fornecedores = "";
+        if (checkCar.isSelected()==true){
+            fornecedores += "CarBus ";
+        }
+        if (checkMx.isSelected()==true){
+            fornecedores += "MX ";
+        }
+        if (checkPlat.isSelected()==true){
+            fornecedores += "Platinum ";
+        }
+        if (radioNao.isSelected()==true){
+            estoque = "Não possui estoque!";
+            
+        };
+       
+        JOptionPane.showMessageDialog(null, 
+                    "Nome do produto: " + nome + "\n" 
+                    +"Descrição do prod: " + descricao
+                    +"\nEstoque: "+ estoque
+                    +"\nFaixa valor: "+ faixaValor
+                    +"\nFornecedores: "+ fornecedores
+        );
     }//GEN-LAST:event_botaoSalvarActionPerformed
 
     private void botaoLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLimparActionPerformed
@@ -378,10 +404,10 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JButton botaoSalvar;
     private javax.swing.JButton buttonBack;
     private javax.swing.JTextField campoNome;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JCheckBox checkCar;
+    private javax.swing.JCheckBox checkMx;
+    private javax.swing.JCheckBox checkPlat;
+    private javax.swing.JComboBox<String> comboFaixaValor;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -392,11 +418,11 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.ButtonGroup radioButtonGroupInventory;
+    private javax.swing.JRadioButton radioNao;
+    private javax.swing.JRadioButton radioSim;
     // End of variables declaration//GEN-END:variables
 }
