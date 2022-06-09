@@ -37,14 +37,14 @@ public class Formulario extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        radiobtnMasculino = new javax.swing.JRadioButton();
+        radiobtnFeminino = new javax.swing.JRadioButton();
         campoNome = new javax.swing.JTextField();
         campoNascimento = new javax.swing.JTextField();
         campoEndereco = new javax.swing.JTextField();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        btnADS = new javax.swing.JRadioButton();
+        btnEE = new javax.swing.JRadioButton();
+        btnGestao = new javax.swing.JRadioButton();
         panelBancarios = new javax.swing.JPanel();
         botaoLimparPessoa = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
@@ -62,6 +62,7 @@ public class Formulario extends javax.swing.JFrame {
         campoObservacao = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
         botaoLimparLogin = new javax.swing.JButton();
+        btnSalvarLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,20 +90,20 @@ public class Formulario extends javax.swing.JFrame {
 
         jLabel8.setText("Cursos");
 
-        grupoSexo.add(jRadioButton1);
-        jRadioButton1.setText("Masculino");
+        grupoSexo.add(radiobtnMasculino);
+        radiobtnMasculino.setText("Masculino");
 
-        grupoSexo.add(jRadioButton2);
-        jRadioButton2.setText("Feminino");
+        grupoSexo.add(radiobtnFeminino);
+        radiobtnFeminino.setText("Feminino");
 
-        grupoCursos.add(jRadioButton3);
-        jRadioButton3.setText("ADS");
+        grupoCursos.add(btnADS);
+        btnADS.setText("ADS");
 
-        grupoCursos.add(jRadioButton4);
-        jRadioButton4.setText("EE");
+        grupoCursos.add(btnEE);
+        btnEE.setText("EE");
 
-        grupoCursos.add(jRadioButton5);
-        jRadioButton5.setText("Gestão Comercial");
+        grupoCursos.add(btnGestao);
+        btnGestao.setText("Gestão Comercial");
 
         javax.swing.GroupLayout panelPessoaisLayout = new javax.swing.GroupLayout(panelPessoais);
         panelPessoais.setLayout(panelPessoaisLayout);
@@ -140,15 +141,15 @@ public class Formulario extends javax.swing.JFrame {
                     .addGroup(panelPessoaisLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panelPessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(radiobtnMasculino, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radiobtnFeminino, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(51, 51, 51)
                         .addGroup(panelPessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelPessoaisLayout.createSequentialGroup()
-                                .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnADS, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btnEE, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnGestao, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPessoaisLayout.setVerticalGroup(
@@ -172,13 +173,13 @@ public class Formulario extends javax.swing.JFrame {
                     .addComponent(jLabel8))
                 .addGap(18, 18, 18)
                 .addGroup(panelPessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(radiobtnMasculino)
+                    .addComponent(btnADS)
+                    .addComponent(btnEE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(panelPessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton5))
+                    .addComponent(radiobtnFeminino)
+                    .addComponent(btnGestao))
                 .addGap(18, 18, 18)
                 .addGroup(panelPessoaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botaoLimparBanco)
@@ -269,6 +270,13 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
 
+        btnSalvarLogin.setText("Salvar");
+        btnSalvarLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelLoginLayout = new javax.swing.GroupLayout(panelLogin);
         panelLogin.setLayout(panelLoginLayout);
         panelLoginLayout.setHorizontalGroup(
@@ -290,10 +298,12 @@ public class Formulario extends javax.swing.JFrame {
                                     .addComponent(campoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 104, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(panelLoginLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginLayout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(btnSalvarLogin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botaoLimparLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(87, 87, 87))
         );
         panelLoginLayout.setVerticalGroup(
             panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -311,7 +321,9 @@ public class Formulario extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(botaoLimparLogin)
+                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botaoLimparLogin)
+                    .addComponent(btnSalvarLogin))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -363,6 +375,33 @@ public class Formulario extends javax.swing.JFrame {
         campoSenha.setText("");
     }//GEN-LAST:event_botaoLimparLoginActionPerformed
 
+    private void btnSalvarLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarLoginActionPerformed
+        Pessoa p1 = new Pessoa();
+        p1.setNome(campoNome.getText());
+        p1.setEndereco(campoEndereco.getText());
+        p1.setDataNascimento(campoNascimento.getText());
+        String auxSexo = "Feminino";
+        if (radiobtnMasculino.isSelected()){
+            auxSexo = "Masculino";
+        }
+        p1.setSexo(auxSexo);
+        
+        String auxCursos ="";
+        if (btnADS.isSelected()){
+            auxCursos = "ADS";
+        }
+        if (btnEE.isSelected()){
+            auxCursos = "EE";
+        }
+        if (btnGestao.isSelected()){
+            auxCursos = "Gestao";
+        }
+        p1.setCursos(auxCursos);
+        
+        this.dispose();
+        new Tabela(p1).setVisible(true);
+    }//GEN-LAST:event_btnSalvarLoginActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -402,6 +441,10 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.JButton botaoLimparBanco;
     private javax.swing.JButton botaoLimparLogin;
     private javax.swing.JButton botaoLimparPessoa;
+    private javax.swing.JRadioButton btnADS;
+    private javax.swing.JRadioButton btnEE;
+    private javax.swing.JRadioButton btnGestao;
+    private javax.swing.JButton btnSalvarLogin;
     private javax.swing.JTextField campoAgencia;
     private javax.swing.JTextField campoConta;
     private javax.swing.JTextField campoEndereco;
@@ -425,15 +468,12 @@ public class Formulario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel panelBancarios;
     private javax.swing.JPanel panelLogin;
     private javax.swing.JPanel panelPessoais;
+    private javax.swing.JRadioButton radiobtnFeminino;
+    private javax.swing.JRadioButton radiobtnMasculino;
     // End of variables declaration//GEN-END:variables
 }
